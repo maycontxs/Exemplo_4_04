@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+<h:head>
+	<title>Checkboxes, Radio buttons, Menus, and Listboxes</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:outputStylesheet library="css" name="styles.css" target="head" />
+		<h:outputFormat value="Thank you {0}, for your information">
+			<f:param value="#{form.name}" />
+		</h:outputFormat>
+		<h:panelGrid columns="2">
+			Contact me:
+			<h:outputText value="#{form.contactMe}" />
+			Best day to contact you:
+			<h:outputText value="#{form.bestDaysConcatenated}" />
+			Your year of birth:
+			<h:outputText value="#{form.yearOfBirth}" />
+			Languages:
+			<h:outputText value="#{form.languages}" />
+			Colors:
+			<h:outputText value="#{form.colorsConcatenated}" />
+			Education:
+			<h:outputText value="#{form.education}" />
+		</h:panelGrid>
+		<h:commandButton value="Back" action="index" />
+	</h:form>
+</h:body>
+
+</html>
